@@ -22,7 +22,7 @@ $resultrfc = mysql_fetch_array($getRFC);
 $rfc =  $resultrfc['rfc'];
 
  $bills = mysql_query("SELECT DISTINCT facturacion_cliente.email, 
- 									   facturacion_cliente.idFacturacion, 
+ 									   operacion_cliente.idFacturacion, 
  									   operacion_cliente.idOperacion, 
  									   operacion_cliente.numeroOperacion, 
  									   operacion_cliente.xml,
@@ -141,7 +141,8 @@ $rfc =  $resultrfc['rfc'];
 
 							<td align="center"><p class="strong"><?php echo date("d-m-Y", strtotime($fechaOperacion)); ?></p></td>
 
-							<td align="center"><p class="blue strong"><a href="<?php echo $file_pdf; ?>" class="fancybox fancybox.iframe"><?php echo $idFacturacion; ?></a></p></td>
+							<td align="center"><p class="blue strong"><a href="<?php echo $file_pdf; ?>" class="fancybox fancybox.iframe">
+							<?php echo $idFacturacion; ?></a></p></td>
 
 							<td align="center"><p class="strong"><?php echo $operacion; ?></p></td>
 
