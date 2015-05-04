@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /css/
+Disallow: /img/
+Disallow: /js/
+Disallow: /lib/
+Disallow: /site/pdf/
+Disallow: /site/xml/
+Disallow: /vendor/
+Disallow: /site/_generate/
