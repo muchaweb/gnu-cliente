@@ -20,7 +20,9 @@
       'id' : 'operacion' + index,
       'name' : 'operacion[]',
       'class': 'form-control',
-      'placeholder' : 'Número de operación'
+      'placeholder' : 'Número de operación',
+      'autocomplete' : 'off',
+      'onpaste' : 'return false'
     });
 
     form.append(input);

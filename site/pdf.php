@@ -102,11 +102,11 @@ $billPDF = '
                 <td align="" style="padding:10px; border: solid 3px white; width:110px; " class="">Subtotal</td>
             </tr>
             <tr>
-              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 100px; vertical-align: top;">'.$volumen.'</td>
-              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 100px; vertical-align: top;">m3</td>
-              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 100px; vertical-align: top;">'.$concepto.'</td>
-              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 100px; vertical-align: top;">$'.$precioPorUnidad.'</td>
-              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 100px; vertical-align: top;">$'.$subtotal.'</td>
+              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 20px; vertical-align: top;">'.$volumen.'</td>
+              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 20px; vertical-align: top;">m3</td>
+              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 20px; vertical-align: top;">'.$concepto.'</td>
+              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 20px; vertical-align: top;">$'.$precioPorUnidad.'</td>
+              <td align="" class="" style="padding: 10px; border: solid 3px white; height: 20px; vertical-align: top;">$'.$subtotal.'</td>
             </tr>
         </table>
     </div>
@@ -170,7 +170,7 @@ $billPDF = '
 
 <div class="row">
     <div class="col-xs-3">
-        <img src="../img/qr3gas.jpg"  alt=""/>
+        <img src="qr3gas.jpg"  alt=""/>
     </div>
     <div class="col-xs-8">
         <strong class="small">Cadena Original del Complemento de Certificación Digital del SAT</strong><br>

@@ -244,9 +244,9 @@ foreach ($operacion as $keyXMLPDF) {
     exit;
   }
  } 
-  require_once("../lib/mail/class.phpmailer.php");
-  require_once("../lib/mail/class.smtp.php");
-
+  //require_once("../lib/mail/class.phpmailer.php");
+  //require_once("../lib/mail/class.smtp.php");
+  require '../lib/mail/PHPMailerAutoload.php';
 
   $txt = "Estimado usuario le hacemos llegar los datos de facturación solicitados.";
 
@@ -260,7 +260,6 @@ foreach ($operacion as $keyXMLPDF) {
   $mail->SMTPSecure = 'tls';
   $mail->Port = 25;
   $mail->From = "ecs@gnu.mx";
-  $mail->SMTPDebug = 1;
 
   $mail->FromName = iconv('UTF-8', 'ISO-8859-1',"Facturación GNU");
   $mail->Subject = iconv('UTF-8', 'ISO-8859-1', "Datos de facturación | Operación ".$idFacturacion);
