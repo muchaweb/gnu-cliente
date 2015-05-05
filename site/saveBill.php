@@ -224,6 +224,7 @@ foreach ($operacion as $keyXMLPDF) {
 
   include('xml.php');
   include('pdf.php');
+  
 
   $getRFC = mysql_query("SELECT * FROM clientes WHERE id_cliente ='$idclientes' LIMIT 1") or die(mysql_error());
   $resultrfc = mysql_fetch_array($getRFC);
@@ -244,9 +245,10 @@ foreach ($operacion as $keyXMLPDF) {
     exit;
   }
  } 
-  //require_once("../lib/mail/class.phpmailer.php");
-  //require_once("../lib/mail/class.smtp.php");
-  require '../lib/mail/PHPMailerAutoload.php';
+  require_once("../lib/mail/class.phpmailer.php");
+  require_once("../lib/mail/class.smtp.php");
+
+  //require '../lib/mail/PHPMailerAutoload.php';
 
   $txt = "Estimado usuario le hacemos llegar los datos de facturación solicitados.";
 
@@ -267,7 +269,7 @@ foreach ($operacion as $keyXMLPDF) {
   $body = iconv('UTF-8', 'ISO-8859-1',$txt);
   $mail->Body = $body;
   $mail->AddAttachment($pathXML);
-  $mail->AddAttachment($pathPDF);
+  $mail->AddAttachment($fullPathPDF);
   $mail->IsHTML(true);
   $mail->Send();
 

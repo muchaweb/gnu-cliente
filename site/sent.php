@@ -43,10 +43,11 @@ $resultemail = mysql_fetch_array($getEmail);
 $email_factura       =   $resultemail['email'];
 
 //ENVIO CORREO CON LA INFORMACION DEL PDF Y XML
-/*require_once("../lib/mail/class.phpmailer.php");
+require_once("../lib/mail/class.phpmailer.php");
+require_once("../lib/mail/class.smtp.php");
 
-require_once("../lib/mail/class.smtp.php");*/
-require '../lib/mail/PHPMailerAutoload.php';
+//require '../lib/mail/PHPMailerAutoload.php';
+
 $txt = "Estimado usuario le hacemos llegar los datos de facturación solicitados.";
 
 $mail = new PHPMailer;

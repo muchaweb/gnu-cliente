@@ -214,4 +214,5 @@ $mpdf->Output('pdf/response_'.$idFacturacion.'.pdf','F');
 
 */
 $pathPDF = 'response_'.$idFacturacion.'.pdf';
+$fullPathPDF = 'pdf/'.$pathPDF;
 ?>
