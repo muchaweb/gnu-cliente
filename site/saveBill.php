@@ -36,7 +36,12 @@ if($idFacturacion_data == ""){
                                  VALUES ('$idclientes', '$razonSocial', '$email')");
 }
 
-$idFacturacion = mysql_insert_id();
+//$idFacturacion = mysql_insert_id();
+
+$selectFact = mysql_query("SELECT idFacturacion FROM operacion_cliente ORDER BY idOperacion DESC LIMIT 1");
+
+$r = mysql_fetch_array($selectFact);
+$idFacturacion = $r['idFacturacion']+1;
 
 
 //Sanitizar y validar
